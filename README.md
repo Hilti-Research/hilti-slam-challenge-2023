@@ -1,9 +1,11 @@
 # Hilti-SLAM-Challenge-2023
 
-## Documentation
-### Handheld datasets
-[Visit the documentation for the handheld device here](documentation/hardware/handheld/Overview.md)
+## Hardware Documentation
+### Handheld
+[Visit the documentation for the handheld hardware here](documentation/hardware/Handheld.md)
 
 
-### Robot datasets
-[Visit the documentation for the handheld device here](documentation/hardware/handheld/Overview.md)
+### Robot
+[Visit the documentation for the robot hardware here](documentation/hardware/Robot.md)
+
+## FAQ General
