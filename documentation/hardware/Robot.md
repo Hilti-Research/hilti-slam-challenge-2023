@@ -22,7 +22,7 @@ We used [kalibr](https://github.com/ethz-asl/kalibr) for the intrinsic calibrati
 
 ## Datasets
 
-In total. we provide three robotic datasets which were recorded on a construction site of a parking garage.
+In total, we provide three robotic datasets which were recorded on a construction site of a parking garage.
 
 ### Topics
 #### /imu/data
@@ -39,10 +39,10 @@ The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melod
 | timestamp | float64 | The **absolute** timestamp of the point                                                |
 
 #### /track_odometry
-The track odometry topic of type [`nav_msgs/Odometry`](http://docs.ros.org/en/noetic/api/nav_msgs/html/msg/Odometry.html) provides a 2D estimate of the linear and angular velocity and an integrated 2D position of the system given the track velocities at 100Hz.
+The track odometry topic of type [`nav_msgs/Odometry`](http://docs.ros.org/en/noetic/api/nav_msgs/html/msg/Odometry.html) provides a 2D estimate of the linear and angular velocity and an integrated 2D position of the system given the track velocities at 100Hz. Note that this sensor is only software-synchronized (we do not expect this to be significantly more accurate than 10ms).
 
 #### /oak_cam_<STEREO_DIRECTION>/\<SUB_CAMERA>/image_raw
-The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `1280x800`. The header timestamp corresponds to the center-of-exposure of the image. The `<STEREO_DIRECTION>` of refers to where the stereo camera is pointing (front, left, rear, right) and the `<SUB_CAMERA>` selects the actual camera on the stereo camera system (left, right). The frames are named as follows
+The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `1280x800`. The header timestamp corresponds to the center-of-exposure of the image. The `<STEREO_DIRECTION>` refers to where the stereo camera is pointing (front, left, rear, right) and the `<SUB_CAMERA>` selects the actual camera on the stereo camera system (left, right). The frames are named as follows
 
 | Stereo Direction | Sub-camera | Topic                          | Frame ID                                 |
 |------------------|------------|--------------------------------|------------------------------------------|
