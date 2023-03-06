@@ -68,6 +68,6 @@ The exposure info topics of type [`hilti_slam_challenge_msgs/ExposureInfo`](http
 ### Is there a URDF model of the sensor setup?
 There is no URDF model available for the robot itself, but each sensor comes with the respective mesh models.
 
-- [`Robosense Bpearl`](hhttps://www.robosense.ai/en/resources-20): 3D model available to download
+- [`Robosense Bpearl`](https://www.robosense.ai/en/resources-20): 3D model available to download
 - [`OAK D Pro W PoE`](https://docs.luxonis.com/projects/hardware/en/latest/pages/NG9097prow.html#d-models): 3D model available to download
 - [`XSens MTi 600`](https://base.xsens.com/s/article/STEP-files-for-the-MTi-600-series?language=en_US): 3D model available to download
