@@ -24,6 +24,12 @@ We used [kalibr](https://github.com/ethz-asl/kalibr) for the intrinsic calibrati
 
 In total, we provide three robotic datasets which were recorded on a construction site of a parking garage.
 
+| Dataset                  | Description                                                                                                |
+|--------------------------|------------------------------------------------------------------------------------------------------------|
+| sc_full_parking_down.bag | A long dataset with the robot driving through all three parking garage levels.                             |
+| sc_mr_close_to_wall.bag  | A dataset of a large room with the robot constantly close to a wall. Connected to sc_full_parking_down.bag |
+| sc_top_big_room.bag      | A dataset of a large room with the robot driving through the center. Connected to sc_full_parking_down.bag |
+
 ### Topics
 #### /imu/data
 The IMU topic of type [`sensor_msgs/Imu`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html) provides accelerometer and gyroscope measurements at a rate of 200Hz.
@@ -58,13 +64,10 @@ The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/ap
 #### /oak_cam_<STEREO_DIRECTION>/\<SUB_CAMERA>/exposure_info
 The exposure info topics of type [`hilti_slam_challenge_msgs/ExposureInfo`](https://github.com/Hilti-Research/hilti_slam_challenge_msgs/blob/main/msg/ExposureInfo.msg) provide additional information for the images. The header of these messages is equivalent to the corresponding image message. The message contains the fields `start_of_frame` corresponding to the **absolute** start of exposure (this is synchronized across all cameras), the `exposure_time` corresponding to the exposure time in microseconds, and the `iso` corresponding to the sensor sensitivity reported by the camera auto-exposure algorithm.
 
-### Dataset Descriptions
-We provide three robotic datasets which overlap with each other.
-
-| Dataset                  | Description                                                                                                |
-|--------------------------|------------------------------------------------------------------------------------------------------------|
-| sc_full_parking_down.bag | A long dataset with the robot driving through all three parking garage levels.                             |
-| sc_mr_close_to_wall.bag  | A dataset of a large room with the robot constantly close to a wall. Connected to sc_full_parking_down.bag |
-| sc_top_big_room.bag      | A dataset of a large room with the robot driving through the center. Connected to sc_full_parking_down.bag |
-
 ## FAQ Robot
+### Is there a URDF model of the sensor setup?
+There is no URDF model available for the robot itself, but each sensor comes with the respective mesh models.
+
+- [`Robosense Bpearl`](hhttps://www.robosense.ai/en/resources-20): 3D model available to download
+- [`OAK D Pro W PoE`](https://docs.luxonis.com/projects/hardware/en/latest/pages/NG9097prow.html#d-models): 3D model available to download
+- [`XSens MTi 600`](https://base.xsens.com/s/article/STEP-files-for-the-MTi-600-series?language=en_US): 3D model available to download
