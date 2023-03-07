@@ -24,11 +24,11 @@ We used [kalibr](https://github.com/ethz-asl/kalibr) for the intrinsic calibrati
 
 In total, we provide three robotic datasets which were recorded on a construction site of a parking garage.
 
-| Dataset                  | Description                                                                                                |
-|--------------------------|------------------------------------------------------------------------------------------------------------|
-| sc_full_parking_down.bag | A long dataset with the robot driving through all three parking garage levels.                             |
-| sc_mr_close_to_wall.bag  | A dataset of a large room with the robot constantly close to a wall. Connected to sc_full_parking_down.bag |
-| sc_top_big_room.bag      | A dataset of a large room with the robot driving through the center. Connected to sc_full_parking_down.bag |
+| Dataset           | Description                                                                    |
+|-------------------|--------------------------------------------------------------------------------|
+| site2_robot_1.bag | A long dataset with the robot driving through all three parking garage levels. |
+| site2_robot_2.bag | A dataset of a large room with the robot driving through the center.           |
+| site2_robot_3.bag | A dataset of a (different) large room with the robot driving through the center at night.  |
 
 ### Topics
 #### /imu/data
