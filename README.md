@@ -1,7 +1,6 @@
 # Hilti-SLAM-Challenge-2023
-Welcome to the the Hilti SLAM Challenge 2023!
-This repository contains a collection of information + links pertaining to competition specifics. 
-We look forward to your participation :)
+![HSC2023](assets/HSC2023-landscape.jpg?raw=true)
+Welcome to the the Hilti SLAM Challenge 2023! We look forward to your participation :)
 
 ## Hardware Documentation
 ### Handheld Platform 🎥
