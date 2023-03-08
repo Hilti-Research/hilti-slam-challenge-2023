@@ -23,5 +23,5 @@ Simply transform all trajectories into the reference frame of the *_1 dataset of
 ### Can I submit a transformed set of mulltisession SLAM trajectories as a single session SLAM entry?
 Yes, our  submission system compensates for the same.
 
-
-
+### May I run my own calibration?
+Of course! On the [challenge website](https://hilti-challenge.com/), we provide bagfiles for running both intrinsic and extrinsic calibrations. Be aware that in your submission, you should also provide the custom extrinsic so that the adapted transforms can be accounted for in the evaluation. More information about providing custom extrinsics [can be found here](documentation/submissions/Format.md).
