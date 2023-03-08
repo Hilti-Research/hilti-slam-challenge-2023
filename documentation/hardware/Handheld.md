@@ -49,7 +49,7 @@ The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melod
 | ring      | uint8 array  | The index of the laser diode which captured the point, 0 to 31.                         |
 
 #### /alphasense/cam0/image_raw
-The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `720x540`. The `<DIRECTION>` refers to where the respective camera is oriented. The topics and frames are as follows:
+The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `720x540`. The topics and frames are as follows:
 
 | Direction | Topic                      | Frame ID           |
 |-----------|----------------------------|--------------------|
