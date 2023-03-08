@@ -16,7 +16,7 @@ We used [kalibr](https://github.com/ethz-asl/kalibr) for the intrinsic calibrati
 ## Datasets
 We provide datasets from two construction site locations. Each location can be considered a multisession group of sequences.
 Site 1 contains 5x handheld datasets.
-Site 2 introduces 3x robot datasets. Robot dataset information can be accessed on its own [documentation page](documentation/hardware/Robot.md). 
+Site 2 introduces 3x robot datasets and 3x handheld datasets (TBD). Robot dataset information can be accessed on its own [documentation page](documentation/hardware/Robot.md). 
 
 The handheld datasets are as follows.
 
@@ -28,13 +28,38 @@ The handheld datasets are as follows.
 | site1_handheld_4.bag     | Underground level at site 1.                                                                               |
 | site1_handheld_5.bag     | A staircase dataset at site 1.                                                                             |
 
+### Topics
+#### /alphasense/imu
+The IMU topic of type [`sensor_msgs/Imu`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html) provides accelerometer and gyroscope measurements at a rate of 200Hz.
+
+#### /hesai/pandar
+The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/PointCloud2.html) provides the sensor readings of the hemispherical LiDAR mounted to the front of the system at 10Hz. The fields are as follows:
+
+| Field     | Type         | Description                                                                            |
+|-----------|--------------|----------------------------------------------------------------------------------------|
+| x,y,z     | float32      | Measured point in Cartesian coordinates                                                |
+| intensity | float32      | The intensity of the measurement, 0 to 254. We know that uint8 would have been smarter |
+| timestamp | float64      | The timestamp of the point                                                             |
+| ring      | uint8 array  | The index of the laser diode which captured the point, 0 to 31                         |
+
+#### /alphasense/cam0/image_raw
+The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `720x540`. The `<DIRECTION>` refers to where the respective camera is oriented. The topics and frames are as follows:
+
+| Direction | Topic                      | Frame ID           |
+|-----------|----------------------------|--------------------|
+| front     | /alphasense/cam0/image_raw | cam_0_sensor_frame |
+| front     | /alphasense/cam1/image_raw | cam_1_sensor_frame |
+| up        | /alphasense/cam2/image_raw | cam_2_sensor_frame |
+| right     | /alphasense/cam3/image_raw | cam_3_sensor_frame |
+| left      | /alphasense/cam4/image_raw | cam_4_sensor_frame |
+
 ## FAQ Handheld
 
 ### We noticed that the timestamp for every point in a lidar point cloud scan is equal. Is it possible to correct this issue?
 The Hesai ros driver stores the timestamp in [this struct](https://github.com/HesaiTechnology/HesaiLidar_General_ROS/blob/master/src/HesaiLidar_General_SDK/src/PandarGeneralRaw/include/pandarGeneral/point_types.h). What happens is the `sensor_msgs/PointCloud2` Message has a "data" member in byte and it stores the `PointXYZIT` defined time, xyz, etc. The "field" member describes what type of info is in "data". In a programme, one would convert the `PointCloud2` msg into `PointXYZIT` msg to access all the element pandar records.
 
 ### Is there a URDF model of the sensor setup?
-Yes there is! You can clone and compile the following ROS packages:
+Yes there is. You can clone and compile the following ROS packages:
 - [`phasma_description`](https://github.com/Hilti-Research/phasma_description.git): this is the main URDF model of the sensor setup.
 - [`hesai_description`](https://github.com/Hilti-Research/hesai_description): this is the URDF model of the HESAI. It's a dependency of `phasma_description`.
 - [`alphasense_description`](https://github.com/Hilti-Research/alphasense_description): this is the URDF of the Alphasense. It's a dependency of `phasma_description`.
