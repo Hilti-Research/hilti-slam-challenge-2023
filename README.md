@@ -1,5 +1,5 @@
 # Hilti-SLAM-Challenge-2023
-![HSC2023](assets/HSC2023-landscape.jpg?raw=true)
+<img src="assets/HSC2023-landscape.jpg" alt="HSC2023-landscape" height="1080">
 Welcome to the the Hilti SLAM Challenge 2023! We look forward to your participation :)
 
 ## Hardware Documentation
