@@ -14,11 +14,12 @@ The synchronization between the cameras is done by a FPGA. The cameras and the L
 We used [kalibr](https://github.com/ethz-asl/kalibr) for the intrinsic calibration of the cameras, [imu_utils](https://github.com/gaowenliang/imu_utils.git) for the intrinsic calibration of the IMU and [MultiCal](https://github.com/zhixy/multical) for the extrinsic calibration of IMU, cameras and LiDAR. A calibration (together with a dataset for running a new calibration) is made available on the [Challenge Website](https://hilti-challenge.com).
 
 ## Datasets
-We provide datasets from two construction site locations. Each location can be considered a multisession group of sequences.
+We provide datasets from two construction site locations. Each location can be considered a multisession group of sequences. They can also all be submitted as individual single session trajectories.
+
 Site 1 contains 5x handheld datasets.
 Site 2 introduces 3x robot datasets and 3x handheld datasets (TBD). Robot dataset information can be accessed on its own [documentation page](documentation/hardware/Robot.md). 
 
-The handheld datasets are as follows.
+The handheld datasets released (as of March 9th 2023) are as follows:
 
 | Dataset                  | Description                    |
 |--------------------------|--------------------------------|
@@ -30,19 +31,19 @@ The handheld datasets are as follows.
 
 ### Topics
 #### /alphasense/imu
-The IMU topic of type [`sensor_msgs/Imu`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html) provides accelerometer and gyroscope measurements at a rate of 200Hz.
+The IMU topic of type [`sensor_msgs/Imu`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html) provides accelerometer and gyroscope measurements at a rate of 200Hz. It's frame is called `imu_sensor_frame`.
 
 #### /hesai/pandar
 The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/PointCloud2.html) provides the sensor readings of the hemispherical LiDAR mounted to the front of the system at 10Hz. The fields are as follows:
 
-| Field     | Type         | Description                                                                            |
-|-----------|--------------|----------------------------------------------------------------------------------------|
-| x         | float32      | Measured point x coordinate in Cartesian coordinates                                   |
-| y         | float32      | Measured point y coordinate in Cartesian coordinates                                   |
-| z         | float32      | Measured point z coordinate in Cartesian coordinates                                   |
-| intensity | float32      | The intensity of the measurement, 0 to 254. We know that uint8 would have been smarter |
-| timestamp | float64      | The timestamp of the point                                                             |
-| ring      | uint8 array  | The index of the laser diode which captured the point, 0 to 31                         |
+| Field     | Type         | Description                                                                             |
+|-----------|--------------|-----------------------------------------------------------------------------------------|
+| x         | float32      | Measured point x coordinate in Cartesian coordinates.                                   |
+| y         | float32      | Measured point y coordinate in Cartesian coordinates.                                   |
+| z         | float32      | Measured point z coordinate in Cartesian coordinates.                                   |
+| intensity | float32      | The intensity of the measurement, 0 to 254. We know that uint8 would have been smarter. |
+| timestamp | float64      | The timestamp of the point.                                                             |
+| ring      | uint8 array  | The index of the laser diode which captured the point, 0 to 31.                         |
 
 #### /alphasense/cam0/image_raw
 The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `720x540`. The `<DIRECTION>` refers to where the respective camera is oriented. The topics and frames are as follows:
