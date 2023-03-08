@@ -1,6 +1,7 @@
 # Hilti-SLAM-Challenge-2023
-Welcome to the the Hilti SLAM Challenge 2023!
-This repository contains a comprehensive collection of information + links pertaining to competition specifics. We look forward to your participation :)
+![HSC2023](assets/HSC2023-landscape.jpg?raw=true)
+
+Welcome to the the Hilti SLAM Challenge 2023! We look forward to your participation :)
 
 ## Hardware Documentation
 ### Handheld Platform 🎥
@@ -19,8 +20,8 @@ We disclose the names only with prior consent. Before making the leaderboard pub
 The files struccture should be same as that of SLAM Challenge 2022, with individual trajectories in TUM format in a .zip file, with each trajectory's name matching the bag file name with a .txt extension instead of a .bag.
 Simply transform all trajectories into the reference frame of the *_1 dataset of that site/location.
 
-### Can I submit a mulltisession SLAM traajectory set as a single session SLAM entry?
-Yes, our system compensates for the same :)
+### Can I submit a transformed set of mulltisession SLAM trajectories as a single session SLAM entry?
+Yes, our  submission system compensates for the same.
 
 
 
