@@ -1,13 +1,13 @@
 # Handheld Hardware
 The handheld platform is the same as that of the 2022 SLAM Challenge.
 
-<img src="images/handheld/handheld.jpg" alt="Handheld device">
+<img src="images/handheld/handheld.jpg" alt="Handheld device" height="50%" width="50%">
 
 ## System Overview
 It is equipped with a [Hesai Pandat XT-32](http://www.oxts.com/wp-content/uploads/2021/01/Hesai-PandarXT_User_Manual.pdf) LIDAR, and an [Alphasense Core](https://github.com/sevensense-robotics/alphasense_core_manual) camera+IMU. 
 An overview of the coordinate systems can be seen in the following image.
 
-<img src="images/handheld/frames1.png" alt="Handheld Frames 1">
+<img src="images/handheld/frames1.png" alt="Handheld Frames 1" height="50%" width="50%">
 
 
 ## Synchronization
