@@ -20,13 +20,13 @@ Site 2 introduces 3x robot datasets and 3x handheld datasets (TBD). Robot datase
 
 The handheld datasets are as follows.
 
-| Dataset                  | Description                                                                                                |
-|--------------------------|------------------------------------------------------------------------------------------------------------|
-| site1_handheld_1.bag     | Floor 0 of site 1.                                                                                         |
-| site1_handheld_2.bag     | Floor 1 of site 1.                                                                                         |
-| site1_handheld_3.bag     | Floor 2 of site 1.                                                                                         |
-| site1_handheld_4.bag     | Underground level at site 1.                                                                               |
-| site1_handheld_5.bag     | A staircase dataset at site 1.                                                                             |
+| Dataset                  | Description                    |
+|--------------------------|--------------------------------|
+| site1_handheld_1.bag     | Floor 0 of site 1.             |
+| site1_handheld_2.bag     | Floor 1 of site 1.             |
+| site1_handheld_3.bag     | Floor 2 of site 1.             |
+| site1_handheld_4.bag     | Underground level at site 1.   |
+| site1_handheld_5.bag     | A staircase dataset at site 1. |
 
 ### Topics
 #### /alphasense/imu
@@ -37,7 +37,9 @@ The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melod
 
 | Field     | Type         | Description                                                                            |
 |-----------|--------------|----------------------------------------------------------------------------------------|
-| x,y,z     | float32      | Measured point in Cartesian coordinates                                                |
+| x         | float32      | Measured point x coordinate in Cartesian coordinates                                   |
+| y         | float32      | Measured point y coordinate in Cartesian coordinates                                   |
+| z         | float32      | Measured point z coordinate in Cartesian coordinates                                   |
 | intensity | float32      | The intensity of the measurement, 0 to 254. We know that uint8 would have been smarter |
 | timestamp | float64      | The timestamp of the point                                                             |
 | ring      | uint8 array  | The index of the laser diode which captured the point, 0 to 31                         |
