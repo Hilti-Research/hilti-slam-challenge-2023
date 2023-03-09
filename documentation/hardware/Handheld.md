@@ -48,6 +48,8 @@ The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melod
 | timestamp | float64      | The timestamp of the point.                                                             |
 | ring      | uint8 array  | The index of the laser diode which captured the point, 0 to 31.                         |
 
+The feame ID of the LiDAR measurements is `PandarXT-32`.
+
 #### /alphasense/cam0/image_raw
 The camera topics of type [`sensor_msgs/Image`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) provide the image data for the sensors at 10Hz. The image dimensions are `720x540`. The topics and frames are as follows:
 
