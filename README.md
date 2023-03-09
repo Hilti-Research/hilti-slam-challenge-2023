@@ -9,6 +9,8 @@ Welcome to the the Hilti SLAM Challenge 2023! We look forward to your participat
 
 
 ### Robot Platform 🤖
+The release of the robotic datasets is planned for the **17th of March 2023**.
+
 [Visit the documentation for the robot hardware here](documentation/hardware/Robot.md)
 
 ## FAQ
