@@ -1,5 +1,5 @@
 # Hilti-SLAM-Challenge-2023
-![HSC2023](assets/HSC2023-landscape.jpg?raw=true)
+[![HSC2023](assets/HSC2023-landscape.jpg?raw=true)](https://hilti-challenge.com/)
 
 Welcome to the the Hilti SLAM Challenge 2023! We look forward to your participation :)
 
