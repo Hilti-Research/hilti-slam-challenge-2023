@@ -32,7 +32,7 @@ In total, we provide three robotic datasets which were recorded on a constructio
 
 ### Topics
 #### /imu/data
-The IMU topic of type [`sensor_msgs/Imu`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html) provides accelerometer and gyroscope measurements at a rate of 200Hz.
+The IMU topic of type [`sensor_msgs/Imu`](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html) provides accelerometer and gyroscope measurements at a rate of 200Hz. The frame ID of the measurements is `xsens_imu_link`.
 
 #### /rslidar_points
 The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/PointCloud2.html) provides the sensor readings of the hemispherical LiDAR mounted to the front of the system at 10Hz. The header timestamp corresponds to the last (latest) point in the message. The fields are as follows
@@ -44,7 +44,7 @@ The LiDAR topic of type [`sensor_msgs/PointCloud2`](http://docs.ros.org/en/melod
 | ring      | uint16  | The index of the laser diode which captured the point, 0 to 31                         |
 | timestamp | float64 | The **absolute** timestamp of the point                                                |
 
-Note that unlike the images might suggest, when recording the datasets, we removed the robot arm. Therefore, it is possible to use the full pointcloud without running a self-filter.
+Note that unlike the images might suggest, when recording the datasets, we removed the robot arm. Therefore, it is possible to use the full pointcloud without running a self-filter. The frame ID of the LiDAR measurements is `rslidar`.
 
 #### /track_odometry
 The track odometry topic of type [`nav_msgs/Odometry`](http://docs.ros.org/en/noetic/api/nav_msgs/html/msg/Odometry.html) provides a 2D estimate of the linear and angular velocity and an integrated 2D position of the system given the track velocities at 100Hz. Note that this sensor is only software-synchronized (we do not expect this to be significantly more accurate than 10ms).
