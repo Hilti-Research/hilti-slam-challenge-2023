@@ -22,15 +22,18 @@ We provide datasets from two construction site locations. Each location can be c
 Site 1 contains 5x handheld datasets.
 Site 2 introduces 3x robot datasets and 3x handheld datasets (TBD). Robot dataset information can be accessed on its own [documentation page](documentation/hardware/Robot.md). 
 
-The handheld datasets released (as of March 9th 2023) are as follows:
+The handheld datasets released (as of March 17th 2023) are as follows:
 
-| Dataset                  | Description                    |
-|--------------------------|--------------------------------|
-| site1_handheld_1.bag     | Floor 0 of site 1.             |
-| site1_handheld_2.bag     | Floor 1 of site 1.             |
-| site1_handheld_3.bag     | Floor 2 of site 1.             |
-| site1_handheld_4.bag     | Underground level at site 1.   |
-| site1_handheld_5.bag     | A staircase dataset at site 1. |
+| Dataset                  | Description                                                                                                  |
+|--------------------------|--------------------------------------------------------------------------------------------------------------|
+| site1_handheld_1.bag     | Floor 0 of site 1.                                                                                           |
+| site1_handheld_2.bag     | Floor 1 of site 1.                                                                                           |
+| site1_handheld_3.bag     | Floor 2 of site 1.                                                                                           |
+| site1_handheld_4.bag     | Underground level at site 1.                                                                                 |
+| site1_handheld_5.bag     | Staircase at site 1.                                                                                         |
+| site2_handheld_4.bag     | Central Staircase at site 2                                                                                  |
+| site2_handheld_5.bag     | Vault staircase at site 2. Not evaluated, used to improve robot multisession results.                        |
+| site2_handheld_6.bag     | Large room connector staircase dataset at site 2. Not evaluated, used to improve robot multisession results. |
 
 ### Topics
 #### /alphasense/imu
