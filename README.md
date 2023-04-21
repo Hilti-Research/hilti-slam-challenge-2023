@@ -29,11 +29,11 @@ Of course! On the [challenge website](https://hilti-challenge.com/), we provide 
 ### How are trajectory scores calculated?
 Our automatic evaluation system compares specific points in submission trajectories with pre-surveyed control points, acquired from a Terrestrial Laser Scanner.
 Each point is scored based on it's accuracy, which is in turn based on the Absolute Trajectory Error (ATE) metric:
-<0.5cm → 20 points
-<1cm → 10 points
-<3cm → 6 points
-<6cm → 5 points
-<10cm → 3 points
-<40cm → 1 point
+<0.5cm → 20 points\
+<1cm → 10 points\
+<3cm → 6 points\
+<6cm → 5 points\
+<10cm → 3 points\
+<40cm → 1 point\
 \>40cm → 0 points
 Then the score for each trajectory (sum of all point scores) is normalized to be in a 0-100 range.
