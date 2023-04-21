@@ -35,5 +35,5 @@ Each point is scored based on it's accuracy, which is in turn based on the Absol
 <6cm → 5 points
 <10cm → 3 points
 <40cm → 1 point
->40cm → 0 points
+\>40cm → 0 points
 Then the score for each trajectory (sum of all point scores) is normalized to be in a 0-100 range.
