@@ -37,3 +37,6 @@ Each point is scored based on it's accuracy, which is in turn based on the Absol
 <40cm → 1 point\
 \>40cm → 0 points\
 Then the score for each trajectory (sum of all point scores) is normalized to be in a 0-100 range.
+
+### Why did you release a new dataset this late in the competition timeline?
+We have identified a vulnerability in our scoring report (APE plot) that indirectly helps estimate ground truth coordinates, and has enabled some teams to falsify results. While we can and will exclude such submissions from the competition leaderboard, we also wish to avoid incorrectly penalizing teams that perform well legitimately. Hence we release an additional dataset location (Site 3) with 4x sequences from the handheld prototype, which will be evaluated but without publishing analysis plots. We also doubled Site 3's per-trajectory score, with a possible maximum of 200 points each. This brings the single session maximum possible score to 1600, the multi-session maximum score to 400.
