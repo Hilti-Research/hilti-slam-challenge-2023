@@ -44,5 +44,5 @@ We have identified a vulnerability in our scoring report (APE plot) that indirec
 ### The new dataset location Site 3 has sequences with frame drops / data discontinuities, is it intentional?
 Yes it is a realistic corner case which we would like for teams to explore.
 
-### The Submission page displays that the deadline has passed even before the May 21st 11.59pm CET timeline. Is this a Software bug?
-Yes it is. Apologies for the confusion, we will rectifiy it at the earliest. We will still accept submissions till the original deadline.
+### When do you plan to make the leaderboard public?
+It will be made public by June 7, 12:00 CET.
