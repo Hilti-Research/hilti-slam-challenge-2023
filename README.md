@@ -45,4 +45,4 @@ We have identified a vulnerability in our scoring report (APE plot) that indirec
 Yes it is a realistic corner case which we would like for teams to explore.
 
 ### When do you plan to make the leaderboard public?
-It will be made public by June 7, 12:00 CET.
+It will be made public in early to mid June 2023.
