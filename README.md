@@ -44,5 +44,17 @@ We have identified a vulnerability in our scoring report (APE plot) that indirec
 ### The new dataset location Site 3 has sequences with frame drops / data discontinuities, is it intentional?
 Yes it is a realistic corner case which we would like for teams to explore.
 
-### When do you plan to make the leaderboard public?
-It will be made public in early to mid June 2023.
+### This work is awesome! Do you have a paper for this? How may I cite it in my research publication?
+Yes we do, you can find our pre-print [here](https://arxiv.org/abs/2404.09765), and on IEEE RA-L in a few months. You can cite it using the following Bibtex citation:
+
+```
+@misc{nair2024hiltislamchallenge2023,
+      title={Hilti SLAM Challenge 2023: Benchmarking Single + Multi-session SLAM across Sensor Constellations in Construction}, 
+      author={Ashish Devadas Nair and Julien Kindle and Plamen Levchev and Davide Scaramuzza},
+      year={2024},
+      eprint={2404.09765},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2404.09765}, 
+}
+```
