@@ -1,4 +1,10 @@
 # Hilti SLAM Challenge 2023
+
+[<img src="https://img.shields.io/badge/Home_Page-red" alt="Home Page">](https://hilti-challenge.com/dataset-2023)
+[<img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset">](https://huggingface.co/datasets/Hilti-Research/hilti-slam-challenge-2023)
+[<img src="https://img.shields.io/badge/arXiv-2404.09765-b31b1b" alt="arXiv">](https://arxiv.org/abs/2404.09765)
+
+
 [![HSC2023](assets/HSC2023-landscape.jpg?raw=true)](https://hilti-challenge.com/)
 
 Welcome to the the Hilti SLAM Challenge 2023! We look forward to your participation :)
@@ -45,16 +51,16 @@ We have identified a vulnerability in our scoring report (APE plot) that indirec
 Yes it is a realistic corner case which we would like for teams to explore.
 
 ### This work is awesome! Do you have a paper for this? How may I cite it in my research publication?
-Yes we do, you can find our pre-print [here](https://arxiv.org/abs/2404.09765), and on IEEE RA-L in a few months. You can cite it using the following Bibtex citation:
+Yes we do, you can find our pre-print [here](https://arxiv.org/abs/2404.09765), and in IEEE RA-L. You can cite it using the following Bibtex citation:
 
-```
+```bibtex
 @misc{nair2024hiltislamchallenge2023,
       title={Hilti SLAM Challenge 2023: Benchmarking Single + Multi-session SLAM across Sensor Constellations in Construction}, 
       author={Ashish Devadas Nair and Julien Kindle and Plamen Levchev and Davide Scaramuzza},
+      journal={IEEE Robotics and Automation Letters},
+      number={8},
+      pages={7286–7293},
       year={2024},
-      eprint={2404.09765},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2404.09765}, 
+      DOI={10.1109/lra.2024.3421791}     
 }
 ```
